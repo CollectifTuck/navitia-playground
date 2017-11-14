@@ -12,22 +12,17 @@
     <ul id="header">
       <li>
         <a id="back" href="index.html" title="Go to Homepage">
-          <img id="logo" src="img/n_playground.svg" alt="Logo">
+          <img id="logo" src="img/tuck_banner.png" alt="Logo">
         </a>
       </li>
       <li>
-        <a id="doc" href="http://doc.navitia.io" title="Go to Navitia documentation">
+        <a style='visibility:hidden' id="doc" href="http://doc.navitia.io" title="Go to Navitia documentation">
           <img id="picto" src="img/picto_doc.svg" alt="picto documentation">
           doc
         </a>
       </li>
       <li id="urlheader">
         <form action="play.html" method="get">
-          <div id="urlDiv" class="inputDiv">
-            <div class="key">URL</div>
-            <input id="urlinput" name="request" type="text" placeholder="Insert your url">
-            <button>go</button>
-          </div>
         </form>
       </li>
     </ul>
@@ -35,8 +30,8 @@
     <div id="content">
       <div id="request">
         <div class="hContainer">
-          <h2>Create a request</h2>
-          <div id="credentialsFrame">
+          <h2>Calcul d'isochrones</h2>
+          <div id="credentialsFrame" style='visibility:hidden'>
             <h3>Fill out credential info</h3>
             <div id="credentials">
               <div id="api" class="inputDiv">
@@ -57,7 +52,7 @@
               </div>
             </div>
           </div>
-          <div id="pathFrame">
+          <div id="pathFrame" style='visibility:hidden'>
             <h3>Build your path</h3>
             <div id="path">
               <div id="addPathElt" class="inputDiv">
@@ -76,6 +71,7 @@
               </div>
             </div>
           </div><!-- pathFrame -->
+
           <div id="parameterFrame">
             <h3>Add parameters</h3>
             <div id="parameters">
@@ -88,16 +84,18 @@
               </div>
             </div>
           </div><!-- parameterFrame -->
-          <div id="createdRequestFrame">
+
+          <div id="submitDiv">
+              <button class="Submit" onclick="request.submit()">Soumettre</button>
+          </div>
+
+          <div id="createdRequestFrame" style='visibility:hidden'>
             <h3>Send the request</h3>
             <div id="urlDiv" class="inputDiv">
               <div class="key">URL</div>
               <div id="requestUrl"></div>
             </div>
-            <div id="submitDiv">
-              <button class="Submit" onclick="request.submit()">Submit</button>
-              or Ctrl+Enter
-            </div>
+            
           </div><!-- createdRequestFrame -->
         </div><!-- hContainer -->
       </div><!-- request-->
