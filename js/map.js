@@ -232,7 +232,7 @@ map._makeTileLayers = function() {
 map._getDefaultLayerName = function() {
     var saved = storage.getLayer();
     if (saved) { return saved; }
-    return 'Hydda';
+    return 'HOT';
 };
 
 map.createMap = function(handle) {

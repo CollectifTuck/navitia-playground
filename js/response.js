@@ -38,7 +38,7 @@ response.setStatus = function(message, status, start_time) {
         var duration = new Date().getTime() - start_time;
         res.append(sprintf(', duration of the request: %dms', duration));
     }
-    $('#status').html(res);
+    // $('#status').html(res);
 };
 
 response.responseCollectionName = function(json) {
@@ -94,16 +94,16 @@ response.render = function(context, json, type, key, idx) {
     head.append($('<div class="name">').html(name));
     head.append($('<div class="summary">').html(summary.run(context, type, json)));
     var button = $('<div class="button">');
-    if (extended.hasExtended(context, type, json)) {
-        button.append(
-            response.makeObjectButton(
-                'Ext',
-                response.makeObjectButtonHandle('div.extended', function() {
-                    return extended.run(context, type, json);
-                })
-            )
-        );
-    }
+    // if (extended.hasExtended(context, type, json)) {
+    //     button.append(
+    //         response.makeObjectButton(
+    //             'Ext',
+    //             response.makeObjectButtonHandle('div.extended', function() {
+    //                 return extended.run(context, type, json);
+    //             })
+    //         )
+    //     );
+    // }
     if (map.hasMap(context, type, json)) {
         button.append(
             response.makeObjectButton(
@@ -125,7 +125,7 @@ response.render = function(context, json, type, key, idx) {
     head.append(button);
 
     var data = $('<div class="data">')
-        .append($('<div class="extended">').hide())
+        // .append($('<div class="extended">').hide())
         .append($('<div class="map">').hide())
         .append($('<div class="code">').hide());
 

@@ -466,13 +466,13 @@ autocomplete.Place.prototype.autocomplete = function(elt) {
         $('<button/>')
             .html('<img src="img/pictos/Location.svg" alt="location">')
             .click(function() {
-                utils.notifyInfo('Getting current position...');
+                utils.notifyInfo('Récupération de votre position...');
                 navigator.geolocation.getCurrentPosition(function(pos) {
                     var coord = sprintf('%.5f;%.5f', pos.coords.longitude, pos.coords.latitude);
-                    utils.notifyInfo('Got location: ' + coord);
+                    utils.notifyInfo('Position récupérée: ' + coord);
                     $(elt).val(coord).select();
                 }, function(error) {
-                    utils.notifyWarn(sprintf('geolocation error: %s', error.message));
+                    utils.notifyWarn(sprintf('Erreur de géolocalisation: %s', error.message));
                 }, {
                     enableHighAccuracy: false,
                     timeout: 60000,//1min

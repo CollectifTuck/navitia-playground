@@ -16,7 +16,7 @@
         </a>
       </li>
       <li>
-        <a style='visibility:hidden' id="doc" href="http://doc.navitia.io" title="Go to Navitia documentation">
+        <a style='display:none' id="doc" href="http://doc.navitia.io" title="Go to Navitia documentation">
           <img id="picto" src="img/picto_doc.svg" alt="picto documentation">
           doc
         </a>
@@ -28,10 +28,10 @@
     </ul>
 
     <div id="content">
-      <div id="request">
+      <div id="request" style='display:none'>
         <div class="hContainer">
           <h2>Calcul d'isochrones</h2>
-          <div id="credentialsFrame" style='visibility:hidden'>
+          <div id="credentialsFrame">
             <h3>Fill out credential info</h3>
             <div id="credentials">
               <div id="api" class="inputDiv">
@@ -52,7 +52,7 @@
               </div>
             </div>
           </div>
-          <div id="pathFrame" style='visibility:hidden'>
+          <div id="pathFrame">
             <h3>Build your path</h3>
             <div id="path">
               <div id="addPathElt" class="inputDiv">
@@ -73,7 +73,6 @@
           </div><!-- pathFrame -->
 
           <div id="parameterFrame">
-            <h3>Add parameters</h3>
             <div id="parameters">
               <div id="addParam" class="inputDiv">
                 <input id="addParamInput"
@@ -89,7 +88,7 @@
               <button class="Submit" onclick="request.submit()">Soumettre</button>
           </div>
 
-          <div id="createdRequestFrame" style='visibility:hidden'>
+          <div id="createdRequestFrame">
             <h3>Send the request</h3>
             <div id="urlDiv" class="inputDiv">
               <div class="key">URL</div>
@@ -104,18 +103,16 @@
 
       <div id="response"><!-- response -->
         <div class="hContainer">
-          <h2>Explore the response</h2>
-          <div id="status">Loading...</div>
           <div id="data"></div>
         </div><!-- hContainer -->
       </div><!-- response -->
     </div><!-- content -->
 
-    <footer>
+    <!-- footer>
       © 2017 <a href="http://navitia.io/">Kisio Digital</a>
       − <a href="https://github.com/CanalTP/navitia-playground">Fork
       me on GitHub</a>
-    </footer>
+    </footer -->
 
     <script src="lib/lib.min.js"></script>
     <script src="js/app.min.js"></script>
